@@ -7,25 +7,24 @@ mkdir myGeantSpace
 cd myGeantSpace
 
 2. Checkout source code and copy to working area
-git clone git@github.com:ZishuoYang/GEANT4-ScintillatorTile.git
+git clone https://github.com/saraheno/GEANT4-ScintillatorTile.git
 
 Build and run instructions
 -----------------------------
 1. Create build directory
-mkdir bill-newLQ-build (if renamed your directory /whaterever/, then do instead: mkdir whatever-build/)
+mkdir build 
 
-2a. Check out CMSSW (Only required the first time), e.g.
-cmsrel CMSSW_4_4_4
+2. cd to GEANT4-ScintillatorTile
 
-2b. cd to SCRAM based area and set up runtime environment, e.g.
-cd CMSSW_4_4_4/src
-cmsenv
+2. run g4env.csh
 
-3. Compile the source code (replace with your file path after "$HOME")
-cd ~/myGeantSpace/bill-newLQ-build
-export G4BASE=/afs/cern.ch/sw/lcg/external/geant4
-source $G4BASE/9.6/x86_64-slc5-gcc43-opt/CMake-setup.sh
-cmake -DWITH_GEANT4_UIVIS=ON -DGeant4_DIR=/afs/cern.ch/sw/lcg/external/geant4/9.6/x86_64-slc5-gcc43-opt/lib64/Geant4-9.6.0/ $HOME/myGeantSpace/bill-newLQ
+
+5. cd ../build
+
+
+
+cmake -DWITH_GEANT4_UIVIS=ON -DGeant4_DIR=$G4LIB /data/users/eno/HONR_s18/GEANT4-ScintillatorTile/bill-newLQ/
+
 make
 
 4a. The following commands executes the input macro files, and pipes the output to the corresponding output files
