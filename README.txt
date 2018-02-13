@@ -23,7 +23,7 @@ mkdir build
 
 
 
-cmake -DWITH_GEANT4_UIVIS=ON -DGeant4_DIR=$G4LIB /data/users/eno/HONR_s18/GEANT4-ScintillatorTile/bill-newLQ/
+cmake -DWITH_GEANT4_UIVIS=ON -DGeant4_DIR=$G4LIB ../GEANT4-ScintillatorTile/bill-newLQ/
 
 make
 
